@@ -3,12 +3,12 @@ import random
 from PIL import Image, ImageOps
 from datetime import datetime
 
-base_image_path = "/Users/krishshah/Pictures/Wallpapers/base.jpg"  # Update this path
+base_image_path = "/Users/kaylahuang/Desktop/scrapbook/base.jpg"  # Update this path
 input_folder = (
-    "/Users/krishshah/Pictures/Wallpapers/Scrapbook"  # Replace with your folder path
+    "/Users/kaylahuang/Desktop/scrapbook/screenshots/"  # Replace with your folder path
 )
-output_folder = "/Users/krishshah/Pictures/Wallpapers/Current/"
-output_name = "scrapbook.jpg"
+output_folder = "/Users/kaylahuang/Desktop/scrapbook/current/"
+output_name = "scrapbook"
 
 supported_formats = [".jpg", ".jpeg", ".png", ".bmp", ".gif"]
 
@@ -120,7 +120,7 @@ def create_wallpaper_with_base(
     wallpaper.save(output_path)
 
 
-output_path = output_folder + get_datetime_string() + output_name
+output_path = output_folder + output_name
 
 # first we delete all images in the output folder that have "scrapbook" in the name
 for file in os.listdir(output_folder):
